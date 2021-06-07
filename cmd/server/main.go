@@ -1,15 +1,8 @@
 package main
 
-import (
-	"github.com/igorok-follow/grpc-server/pkg/adder"
-	"github.com/igorok-follow/grpc-server/pkg/api"
+import "google.golang.org/grpc"
 
-	"google.golang.org/grpc"
-)
-
-func main()  {
+func main() {
 	s := grpc.NewServer()
-	srv := &adder.GRPCServer{}
-	api.RegisterAdderServer(s, srv)
-
+	srv := &
 }

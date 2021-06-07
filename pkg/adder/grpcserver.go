@@ -5,10 +5,8 @@ import (
 	"github.com/igorok-follow/grpc-server/pkg/api"
 )
 
-// GRPCServer ...
-type GRPCServer struct {}
+type gRPCServer struct {}
 
-// Add ...
-func (server *GRPCServer) Add(context *context.Context, req *api.AddRequest) (*api.AddResponse, error) {
-	return &api.AddResponse {Res: req.GetX() * req.GetY()}, nil
+func (server *gRPCServer) Add(ctx context.Context, req *api.AddRequest) (api.AddResponse, error) {
+	return api.AddResponse{Result: req.GetX() + req.GetY()}, nil
 }

@@ -1,16 +1,17 @@
- syntax = "proto3";
+syntax = "proto3";
 
- package api;
+package api;
+option go_package = "./;api";
 
- service Adder {
-     rpc Add(AddRequest) returns (AddResponse);
- } 
+service Adder {
+  rpc Add(AddRequest) returns (AddResponse) {}
+}
 
- message AddRequest {
-    int32 x = 1;
-    int32 y = 2;
- }
+message AddRequest {
+  int32 x = 1;
+  int32 y = 2;
+}
 
- message AddResponse {
-    int32 res = 1;
- }
+message AddResponse {
+  int32 result = 1;
+}
